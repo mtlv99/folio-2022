@@ -1,3 +1,4 @@
+
 const ContactInfo: React.FC<{}> = () => {
   return (
     <>
@@ -20,14 +21,14 @@ const ContactInfo: React.FC<{}> = () => {
             </p>
 
             <p>Thanks for visiting!</p>
-
+            {/* eslint-disable jsx-a11y/anchor-has-content */}
             {/* Icons obtained from: https://simpleicons.org/ */}
             <ul className="contact-list">
               <li className="contact-list-item">
-                <a className="contact-icon github" href="https://github.com/mtlv99" target="_blank" rel="noopener noreferrer"></a>
+                <a className="contact-icon email" href="mailto:marcotleonv@gmail.com"></a>
               </li>
               <li className="contact-list-item">
-                <a className="contact-icon email" href="mailto:marcotleonv@gmail.com"></a>
+                <a className="contact-icon github" href="https://github.com/mtlv99" target="_blank" rel="noopener noreferrer"></a>
               </li>
               <li className="contact-list-item">
                 <a className="contact-icon linkedin" href="https://www.linkedin.com/in/marcoleonv/" target="_blank" rel="noopener noreferrer"></a>
