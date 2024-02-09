@@ -1,4 +1,3 @@
-
 const ContactInfo: React.FC<{}> = () => {
   return (
     <>
@@ -9,17 +8,36 @@ const ContactInfo: React.FC<{}> = () => {
             <h1>Hi there, I'm Marco.</h1>
 
             <p>I'm a Software Developer based in Costa Rica.</p>
-            <p>My main focus is <strong>Front-End Development</strong>. I love working with modern technologies to deliver beautiful experiences.</p>
-            <p>This page is currently a work in progress. I'm planning to build something cool &#40;hopefully&#41; using <strong>React + TypeScript + Three.js</strong>, so bear with me please! &#58;&#41;</p>
-            <p>Feel free to contact me via <a href="mailto:marcotleonv@gmail.com">email</a>, or add me on <a href="https://www.linkedin.com/in/marcoleonv/">LinkedIn</a>. You can also check some of my work on <a href="https://github.com/mtlv99">GitHub</a>.</p>
+            <p>
+              I've been working as a <strong>Full-Stack Developer</strong> with
+              a strong focus on <strong>Front-End Development</strong>. I'm
+              experienced in creating cutting-edge web and mobile applications.
+              Committed to the use of modern technologies to deliver beautiful
+              and unique experiences.
+            </p>
+            <p>
+              Feel free to contact me via email, or add me on LinkedIn. You can also check some of my work on GitHub.
+            </p>
 
             <p>Thanks for visiting!</p>
+
+            {/* Icons obtained from: https://simpleicons.org/ */}
+            <ul className="contact-list">
+              <li className="contact-list-item">
+                <a className="contact-icon github" href="https://github.com/mtlv99" target="_blank" rel="noopener noreferrer"></a>
+              </li>
+              <li className="contact-list-item">
+                <a className="contact-icon email" href="mailto:marcotleonv@gmail.com"></a>
+              </li>
+              <li className="contact-list-item">
+                <a className="contact-icon linkedin" href="https://www.linkedin.com/in/marcoleonv/" target="_blank" rel="noopener noreferrer"></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </>
-  )
-}
-
+  );
+};
 
 export default ContactInfo;

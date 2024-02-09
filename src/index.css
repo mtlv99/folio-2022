@@ -1,5 +1,6 @@
 :root {
   --text-color: white;
+  --icon-primary-color: #333;
 }
 
 html,
@@ -32,6 +33,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+#main-content-container h1 {
+  text-align: center;
+  background: #80F1F1;
+  background: linear-gradient(to right, #80F1F1 0%, #7F7FFF 50%, #FF88FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #main-content-container .row {
@@ -69,6 +79,63 @@ body {
   color: gold;
 }
 
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.contact-list-item {
+
+  flex: 0 0 50px;
+  fill: #d4d4d4;
+  height: 55px;
+  width: 55px;
+  list-style: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.contact-list-item:hover {
+  background-color: var(--icon-primary-color);
+}
+
+.contact-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0.625rem;
+  background-image: linear-gradient(to right, #7F7FFF 0%, #FF88FF 100%);
+  mask-size: contain;
+}
+
+
+.contact-list-item:hover .contact-icon {
+  filter: brightness(1.5);
+}
+
+.contact-icon.github {
+  mask: url('/public/assets/github.svg') no-repeat center / 65%;
+  -webkit-mask: url('/public/assets/github.svg') no-repeat center / 65%;
+}
+
+.contact-icon.email {
+  mask: url('/public/assets/gmail.svg') no-repeat center / 65%;
+  -webkit-mask: url('/public/assets/gmail.svg') no-repeat center / 65%;
+}
+
+.contact-icon.linkedin {
+  mask: url('/public/assets/linkedin.svg') no-repeat center / 65%;
+  -webkit-mask: url('/public/assets/linkedin.svg') no-repeat center / 65%;
+}
 
 @media screen and (max-width: 768px) {
   #main-content {
@@ -84,5 +151,9 @@ body {
     margin: 1rem 0;
     right: 50%;
     transform: translateX(50%);
+  }
+
+  .contact-list {
+    justify-content: center;
   }
 }
